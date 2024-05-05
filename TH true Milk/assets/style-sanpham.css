@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.content__select {
+  background: url(./imgs/bg-danhmuc.jpg) no-repeat left top;
+  background-size: contain;
+}
+.content__select .product {
+  padding: 20px 0;
+}
+.content--box {
+  position: relative;
+  display: block;
+  background: rgba(234, 234, 234, 0.25);
+  margin-bottom: 200px;
+}
+.content--box .product--box1 {
+  position: relative;
+  display: block;
+  margin-bottom: 100px;
+}
+.content--box .product--box1 .title-2 {
+  position: relative;
+  left: -11px;
+  display: inline-block;
+  margin-top: 46px;
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 15px 42px 11px;
+  background: url(./imgs/title-bg1.png) no-repeat;
+  background-size: 100% 100%;
+}
+.content--box .product--box1 .product--list {
+  padding-top: 40px;
+}
+.content--box .product--box1 .product--list::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 72px;
+  background: url(./imgs/bg-ke.png) no-repeat left top;
+  background-size: 100% 100%;
+  bottom: -45px;
+}
+.content--box .product--box1 .productlist-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 111%;
+}
+.product--card img {
+  width: 70%;
+}
+.product--card .listitem-title::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -6px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 7px solid #fff;
+}
+.product--card .listitem-title {
+  position: absolute;
+  padding: 10px 10px 12px;
+  background: #fff;
+  border-radius: 3px;
+  bottom: -80px;
+  width: 195px;
+  text-align: center;
+}
+.product--card .listitem-title h4 {
+  color: #103a71;
+  font-size: 13px;
+}
+.product--card .listitem-title:hover h4 {
+  color: #92752c;
+  transition: all ease 0.4s;
+}
+.product--card .listitem-title span {
+  color: #776c6c;
+}
+.product--card .listitem-title .btn--product {
+  border: none;
+  background-color: #fff;
+}
+.listitem-title .info {
+  margin-right: 5px;
+}
+.listitem-title .info::after {
+  content: "|";
+  margin: 0 10px;
+}
+.listitem-title > button > span > i:hover {
+  color: #92752c;
+  transition: all ease 0.4s;
+}
+.modal.open {
+  display: flex;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.modal .modal--container {
+  position: relative;
+  background-color: #fff;
+  width: 550px;
+  min-height: 200px;
+  border-top: 3px solid #4992f1;
+  animation: modalFadein ease 0.6s;
+  z-index: 89;
+}
+.modal--container .modal--close {
+  position: absolute;
+  right: 0;
+  font-size: 25px;
+  padding: 5px 10px;
+}
+.modal--container .modal--close:hover {
+  background-color: red;
+  cursor: pointer;
+  color: #fff;
+}
+.modal--container .modal--header {
+  padding: 35px 5px;
+  font-size: 25px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.modal--container .modal--body {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 30px;
+}
+.modal--body .modal--laber {
+  margin-bottom: 15px;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.modal--body > .modal--input {
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  border-radius: 100px;
+  border: 1px solid #776c6c;
+}
+.modal--body > .modal--input:focus {
+  border-color: #42a5e3;
+  box-shadow: 0 0 0 0.3rem rgba(114, 205, 244, 0.2);
+}
+#log--in {
+  padding: 8px 16px;
+  border-radius: 100px;
+  background-color: #42a5e3;
+  border: none;
+  color: #fff;
+  opacity: 0.8;
+}
+#log--in:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.modal--body .modal--icon {
+  color: red;
+}
+.modal .sign-up {
+  padding: 0 30px;
+}
+#sign--up {
+  display: block;
+  text-align: center;
+  padding: 8px 16px;
+  border-radius: 100px;
+  margin: 20px 0 50px 0;
+  opacity: 0.8;
+  border: 1px solid #103a71;
+  background-color: #fff;
+  color: #103a71;
+  width: 100%;
+  font-size: 13px;
+}
+#sign--up:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+@keyframes modalFadein {
+  from {
+    transform: translateY(-140px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.error {
+  background-color: #92752c;
+  color: #103a71;
+  padding: 10px;
+  width: 95%;
+  border-radius: 5px;
+}
